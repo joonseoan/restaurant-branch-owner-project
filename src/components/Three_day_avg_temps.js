@@ -4,8 +4,9 @@ import _ from 'lodash';
 
 import ThreeDayTemps from './Three_day_temps';
 
+const ThreeDayAvgTemps = ({ firstDay, secondDay, thirdDay, city, threeDayData }) => {
 
-const ThreeDayAvgTemps = ({ firstDay, secondDay, thirdDay, city, threeDayData })=> {
+
 
     const dayData = [firstDay, secondDay, thirdDay];
     let dailyAvgTemps = [];
@@ -47,8 +48,6 @@ const ThreeDayAvgTemps = ({ firstDay, secondDay, thirdDay, city, threeDayData })
                 { dailyAvgTemps[2] }
             </td>  
         </tr>
-            
-        
         
     );
 

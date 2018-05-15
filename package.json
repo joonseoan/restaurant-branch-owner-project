@@ -8,6 +8,7 @@
     "react-dom": "^16.3.2",
     "react-redux": "^5.0.7",
     "react-scripts": "1.1.4",
+    "react-select-me": "^0.10.3",
     "react-sparklines": "^1.7.0",
     "redux": "^4.0.0",
     "redux-promise": "^0.5.3",

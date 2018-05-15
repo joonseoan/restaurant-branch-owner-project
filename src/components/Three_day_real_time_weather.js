@@ -12,20 +12,6 @@ export default class ThreeDayRealTimeWeather extends Component {
 
         super(props);
 
-        // 컨스트럭터에서 데이터를 밑에 함수로 보낼 수 있나?
-    
-     // const threeData = this.props.threeDayData;
-     //  console.log('threeData', threeData)
-
-     // const firstDayPrecip = this.props.firstDay.map( weathers => weathers.weather[0].description);
-     // console.log('firstDayPrecip: ', firstDayPrecip);
-
-     // const secondDayPrecip = this.props.secondDay.map( weathers => weathers.weather[0].description);
-     // console.log('secondDayPrecip: ', secondDayPrecip);
-
-      // const thirdDayPrecip = this.props.thirdDay.map( weathers => weathers.weather[0].description);
-      // console.log('thirdDayPrecip: ', thirdDayPrecip);
-
         this.state = {
 
             tomorrow : '',
@@ -99,14 +85,7 @@ export default class ThreeDayRealTimeWeather extends Component {
 
          }); 
          
-
-        // count++;
-        // i++;
-
-        // console.log('this.state.day1', this.state.day1) 
-
     }
-
 
     render() {      
 
@@ -197,3 +176,26 @@ export default class ThreeDayRealTimeWeather extends Component {
         // //console.log('setIntervalInfo: ', ddd);
 
         // // const dd = setInterval(weatherInformation(), 2000);
+
+
+
+
+
+
+
+
+
+
+        // 컨스트럭터에서 데이터를 밑에 함수로 보낼 수 있나?
+    
+     // const threeData = this.props.threeDayData;
+     //  console.log('threeData', threeData)
+
+     // const firstDayPrecip = this.props.firstDay.map( weathers => weathers.weather[0].description);
+     // console.log('firstDayPrecip: ', firstDayPrecip);
+
+     // const secondDayPrecip = this.props.secondDay.map( weathers => weathers.weather[0].description);
+     // console.log('secondDayPrecip: ', secondDayPrecip);
+
+      // const thirdDayPrecip = this.props.thirdDay.map( weathers => weathers.weather[0].description);
+      // console.log('thirdDayPrecip: ', thirdDayPrecip);

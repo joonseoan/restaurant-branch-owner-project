@@ -153,8 +153,9 @@ class ThreeDayWeather extends Component {
 
 function mapStateToProps ({ selectedCityWeather }) {
     
+    console.log('selectedCityWeather: ', selectedCityWeather)
     return { selectedCityWeather };
     
 }
 
-export default connect (mapStateToProps)(ThreeDayWeather);
+export default connect(mapStateToProps)(ThreeDayWeather);
