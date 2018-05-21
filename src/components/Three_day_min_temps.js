@@ -1,16 +1,18 @@
 import React from 'react';
-
 import _ from 'lodash';
 
 const ThreeDayMinTemps = (props) => {
 
     const dayData = [props.firstDay, props.secondDay, props.thirdDay];
+    
     const dailyMinTemps = []
 
     for (let i = 0; i < 3; i++) {
 
         let temp = dayData[i].map(temperature => temperature.main.temp_min);
-        temp = temp.sort((a,b) => a-b);
+        
+        temp = temp.sort((a, b) => a - b);
+        
         dailyMinTemps[i] = _.round (temp[0] - 273);
         
     }

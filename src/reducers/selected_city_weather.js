@@ -9,8 +9,8 @@ export default function (state = null, action) {
            // console.log('FETCH_FIVE_DAYS_WEATHER: ', action.payload.data);
 
             /** reminder: must use "payload" */
-            console.log('action.payload.data:  ', action.payload.data)
-            return action.payload.data;
+            console.log('action.payload:  ', action.payload)
+            return action.payload;
         /*
         case FETCH_TODAY_WEATHER:
 

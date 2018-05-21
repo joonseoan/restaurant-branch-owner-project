@@ -3,21 +3,24 @@ import axios from 'axios';
 import { FETCH_FIVE_DAYS_WEATHER } from './fetch_weather';
 import { Open_Weather_Key } from './keyValue';
 
-const FiveDaysURL = `http://api.openweathermap.org/data/2.5/forecast?appid=${Open_Weather_Key}`;
+const weatherURL = `http://api.openweathermap.org/data/2.5/forecast?appid=${Open_Weather_Key}`;
 
-export function weatherInfo(branch_city) {
+export const weatherInfo = branch_city => { 
 
-    const URL = `${ FiveDaysURL }&q=${ branch_city },canada`;
+	const url = `${ weatherURL }&q=${ branch_city },canada`;
 
-    const request = axios.get(URL);
+	return async dispatch => {
 
-    console.log('request: ', request);
+		const res = await axios.get(url); 
 
-    return ({
+		dispatch({
 
-        type: FETCH_FIVE_DAYS_WEATHER,
-        payload: request 
+			type: FETCH_FIVE_DAYS_WEATHER,
+			payload: res.data
 
-    });
+		});
+	
+	};
 
 }
+	

@@ -1,11 +1,8 @@
 import { combineReducers } from 'redux';
-
 import selectedCityWeather  from './selected_city_weather';
 
-const reducers = combineReducers({
+export default combineReducers({
     
     selectedCityWeather
 
 });
-
-export default reducers;
