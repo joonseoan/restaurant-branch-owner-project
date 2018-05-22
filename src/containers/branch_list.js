@@ -14,8 +14,7 @@ const options = [
 
 ];
 
-
-// let startInterval;
+let startInterval;
 
 let branch_city;
 
@@ -32,36 +31,27 @@ class BranchList extends Component {
         };
 
         this.onInputChange = this.onInputChange.bind(this); 
-
         
     }
     
-    setTodayWeatherInfo(branch_city) {
+    setTodayWeatherInfo(branch_city, onChanges = null) {
 
         this.setState({ value : branch_city});
 
         this.props.weatherInfo(branch_city);
-        
-        /*      
-        if(startInterval) clearInterval(startInterval);
+
+        if (onChanges) clearInterval(startInterval);
 
         startInterval = setInterval(() => {
 
-            console.log('branch_city',branch_city);
+            this.props.weatherInfo(branch_city);            
 
-           // this.props.additionalTodayWeatherInfo(branch_city);
-
-        }, 300000);
-*/
+        }, 3600000);    
+        
     }
 
     
     componentDidMount() {
-
-        // When reloading it is undefined.
-        // So We can start from Toronto again
-        //      even though localStorage is implemented.
-        console.log('compo', branch_city)
 
         if (!branch_city) {
 
@@ -79,11 +69,13 @@ class BranchList extends Component {
 
     onInputChange (value) {
         
+        const onChanges = true;
+
         window.localStorage.setItem('branch_city', value.value);
 
         branch_city = window.localStorage.branch_city;
-        
-        this.setTodayWeatherInfo(branch_city);
+
+        this.setTodayWeatherInfo(branch_city, onChanges);
 
     }
 

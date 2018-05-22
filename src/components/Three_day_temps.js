@@ -9,7 +9,7 @@ const ThreeDayTemps = (props) => {
 
         <div>
 
-            <Sparklines height= { 120 } width = { 180 }
+            <Sparklines height= { 320 } width = { 180 }
 
                 data = { threeDayTemps } >
 

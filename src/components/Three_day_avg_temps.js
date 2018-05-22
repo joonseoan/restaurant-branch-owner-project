@@ -20,13 +20,13 @@ const ThreeDayAvgTemps = (props) => {
         
         <tr>
 
-            <td rowSpan = "4">
+            <td rowSpan = "6">
             
                 { props.city }
 
             </td>
 
-            <td rowSpan = "4">
+            <td rowSpan = "6">
                 
                 < ThreeDayTemps threeDayData = { props.threeDayData } />      
             

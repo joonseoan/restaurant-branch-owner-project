@@ -6,7 +6,6 @@ const ThreeDayMaxTemps = (props) => {
     const dayData = [props.firstDay, props.secondDay, props.thirdDay];
     const dailyMaxTemps = []
 
-    console.log('first',props.firstDay)
     for (let i = 0; i < 3; i++) {
 
         let temp = dayData[i].map(temperature => temperature.main.temp_max);

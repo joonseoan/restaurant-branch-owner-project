@@ -53,12 +53,13 @@ class ThreeDayWeather extends Component {
 
         const weatherData = this.threeDayData().reverse();
 
-        const thirdDay = weatherData.filter( data => weatherData.indexOf(data) < 8).reverse();
+        const thirdDay = weatherData.filter( data => weatherData.indexOf(data) < 6).reverse();
         
         const secondDay = weatherData.filter( data => weatherData.indexOf(data) >= 8 
-            && weatherData.indexOf(data) < 16).reverse();
+            && weatherData.indexOf(data) < 14).reverse();
 
-        const firstDay = weatherData.filter( data => weatherData.indexOf(data) >= 16).reverse();
+        const firstDay = weatherData.filter( data => weatherData.indexOf(data) >= 16 
+            && weatherData.indexOf(data) < 22).reverse();
 
         return (
 
