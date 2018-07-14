@@ -19,11 +19,13 @@ class App extends Component {
                     <ThreeDayWeather /> 
                 </div>
 
+                    <p> preparation in terms of weather.</p>
+                    <p> login</p>
                     <p> daily revenu, monthly revenue, yearly revenue</p>
                     <p> order delivery to kitchen </p>
                     <p> revenue in terms of average temp, however, wheather item must be same</p>
                     <p> past revenu history for instance, last week, month, last year</p>
-                    <p> preparation in terms of weather.</p>
+                    
                 
             </div>
 
